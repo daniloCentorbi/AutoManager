@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="marche" namespace="/marche" extends="default">
+		<action name="Marche" class="it.dvel.tirocinio.action.marche.MarcheAction" method="list">
+			<result>/marche/Marche.jsp</result>
+		</action>	
+		<action name="MarcheInsert" class="it.dvel.tirocinio.action.marche.MarcheAction" method="insert">
+			<result type="redirectAction">
+            	<param name="actionName">Marche</param>
+            	<param name="namespace">/marche</param>
+        	</result>
+        	<result name="input" type="redirectAction">
+            	<param name="actionName">Marche</param>
+            	<param name="namespace">/marche</param>
+            </result>
+		</action>
+		<action name="MarcheDelete" class="it.dvel.tirocinio.action.marche.MarcheAction" method="delete">
+			<result type="redirectAction">
+            	<param name="actionName">Marche</param>
+            	<param name="namespace">/marche</param>
+        	</result>
+		</action>
+		<action name="MarchePrepare" class="it.dvel.tirocinio.action.marche.MarcheAction" method="preupdate">
+			<result>/marche/Marche.jsp</result>
+		</action>	
+	</package>
+</struts>

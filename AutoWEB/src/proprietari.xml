@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="proprietari" namespace="/proprietari" extends="default">
+		<action name="Proprietari" class="it.dvel.tirocinio.action.proprietari.ProprietariAction" method="list">
+			<result>/proprietari/Proprietari.jsp</result>
+		</action>	
+		<action name="ProprietariInsert" class="it.dvel.tirocinio.action.proprietari.ProprietariAction" method="insert">
+			<result type="redirectAction">
+            	<param name="actionName">Proprietari</param>
+            	<param name="namespace">/proprietari</param>
+        	</result>
+        	<result name="input" type="redirectAction">
+            	<param name="actionName">Proprietari</param>
+            	<param name="namespace">/proprietari</param>
+            </result>
+		</action>
+		<action name="ProprietariDelete" class="it.dvel.tirocinio.action.proprietari.ProprietariAction" method="delete">
+			<result type="redirectAction">
+            	<param name="actionName">Proprietari</param>
+            	<param name="namespace">/proprietari</param>
+        	</result>
+		</action>
+		<action name="ProprietariPrepare" class="it.dvel.tirocinio.action.proprietari.ProprietariAction" method="preupdate">
+			<result>/proprietari/Proprietari.jsp</result>
+		</action>	
+	</package>
+</struts>

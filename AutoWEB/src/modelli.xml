@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="modelli" namespace="/modelli" extends="default">
+		<action name="Modelli" class="it.dvel.tirocinio.action.modelli.ModelliAction" method="list">
+			<result>/modelli/Modelli.jsp</result>
+		</action>	
+		<action name="ModelliInsert" class="it.dvel.tirocinio.action.modelli.ModelliAction" method="insert">
+			<result type="redirectAction">
+            	<param name="actionName">Modelli</param>
+            	<param name="namespace">/modelli</param>
+        	</result>
+        	<result name="input" type="redirectAction">
+            	<param name="actionName">Modelli</param>
+            	<param name="namespace">/modelli</param>
+            </result>
+		</action>
+		<action name="ModelliDelete" class="it.dvel.tirocinio.action.modelli.ModelliAction" method="delete">
+			<result type="redirectAction">
+            	<param name="actionName">Modelli</param>
+            	<param name="namespace">/modelli</param>
+        	</result>
+		</action>
+		<action name="ModelliPrepare" class="it.dvel.tirocinio.action.modelli.ModelliAction" method="preupdate">
+			<result>/modelli/Modelli.jsp</result>
+		</action>	
+	</package>
+</struts>

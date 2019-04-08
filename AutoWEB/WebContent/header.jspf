@@ -1,0 +1,8 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+
+Menu:
+<s:a action="Marche" namespace="/marche">Marche</s:a> |
+<s:a action="Modelli" namespace="/modelli">Modelli</s:a> |
+<s:a action="Proprietari" namespace="/proprietari">Proprietari</s:a> |
+<s:a action="Storico" namespace="/storico">Storico</s:a>
